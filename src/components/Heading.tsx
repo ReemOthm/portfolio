@@ -1,12 +1,14 @@
 
 const Heading = ()=>{
     return (
-        <div className=" rounded-md py-4 mb-4 bg-gray-100 ">
+        <div className="rounded-md py-4 mb-4">
             <div className="">
-                <h1 className="text-4xl text-center mb-3">Welcome to my portfolio!</h1>
-                <p className="text-center max-w-3xl mx-auto p-3">
-                    Here, you’ll find a collection of my work that showcases my skills, creativity, and passion for Web development. Explore my journey, and feel free to reach out if you’d like to collaborate or learn more about Web development!
-                </p>
+                <div className="p-3 pl-9 w-fill md:w-1/2 border  rounded-lg relative right-2">
+                    <p className="leading-6 w-[100%] m-auto text-[#f3eeee] text-xs text-center md:text-base md:font-normal md:text-start">
+                        <span className="text-xl block mb-2">Welcome to my portfolio!</span>
+                        Here, you’ll find a collection of my work that showcases my skills, creativity, and passion for Web development. Explore my journey, and feel free to reach out if you’d like to collaborate or learn more about Web development!
+                    </p>
+                </div>
             </div>
         </div>
     )

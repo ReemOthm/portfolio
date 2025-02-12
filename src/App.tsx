@@ -3,7 +3,7 @@ import Projects from "./components/Projects";
 
 const App = () => {
   return (
-    <div className="font-semibold my-5">
+    <div className="font-semibold">
       <Heading />
       <main>
         <Projects />

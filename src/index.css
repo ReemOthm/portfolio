@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    background: #616161;  
-    background: -webkit-linear-gradient(to right, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    background: rgb(179, 144, 144);
+    background: linear-gradient(40deg, rgb(179, 144, 144) 15%, rgb(6, 35, 36) 100%);
 }
