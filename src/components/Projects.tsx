@@ -12,11 +12,13 @@ const Projects = ()=>{
         const target = (e.target as HTMLLIElement)
         if(target.parentElement){
             Array.from(target.parentElement.children).forEach((e) => {
-                e.classList.remove("bg-[#474c4d]");
+                e.classList.remove("bg-gray-700");
                 e.classList.remove("text-white");
+                // e.classList.add("bg-[#9a8080]");
             });
         }
-        target.classList.add("bg-[#474c4d]");
+        target.classList.remove("bg-[#9a8080]");
+        target.classList.add("bg-gray-700");
         target.classList.add("text-white");
         const list =  myProjects.filter(item=> item.tools.includes(target.textContent || ""))
         target.textContent == "All" ? setProjects(myProjects) : setProjects(list)
@@ -29,7 +31,7 @@ const Projects = ()=>{
                     {
                         tools.map((item, index)=>(
                             <li key={index} onClick={(e)=>{handleChooseTool(e)}} 
-                                className="bg-[#dfd5d5] rounded-md p-1 cursor-pointer hover:bg-[#565556] hover:text-white"
+                                className="bg-[#dfd5d5] rounded-md p-1 cursor-pointer hover:bg-gray-700 hover:text-white"
                             >
                                 {item}
                             </li>
@@ -37,10 +39,10 @@ const Projects = ()=>{
                     }
                 </ul>
             </div>
-            <section className="flex items-center gap-5 justify-center flex-wrap m-6">
+            <section className="flex gap-5 justify-center flex-wrap m-6 pb-10">
                 {
                     products.map(pro=>(
-                        <div key={pro.projectName} className="bg-indigo-50 hover:bg-gray-100 flex-grow max-w-sm duration-300 rounded-md even:bg-gray-100">
+                        <div key={pro.projectName} className="bg-indigo-50 hover:bg-gray-100 flex-grow max-w-sm duration-300 rounded-md even:bg-gray-100 ">
                             <div className="w-full">
                                 <img className="h-auto w-full" src={pro.projectImage} alt={pro.projectName} />                        
                             </div>
@@ -50,17 +52,23 @@ const Projects = ()=>{
                                 </span>
                                 <div className="flex gap-2 pt-2">
                                     <button className="text-sm rounded-md px-2 py-1 bg-[#885b5b] text-white hover:bg-[#a77777]">
-                                        <a href={pro.deployLink}>
+                                        <a target="_blank" href={pro.deployLink}>
                                             Project Link
                                         </a>
                                     </button>
-                                    <button className="text-sm rounded-md px-2 py-1 bg-[#3d4647] text-white hover:bg-[#556061] ">
-                                        <a href={pro.githubRrpo}>
+                                    <button className="text-sm rounded-md px-2 py-1 bg-gray-700 text-white hover:bg-gray-600 ">
+                                        <a target="_blank" href={pro.githubRrpo}>
                                             Github Repo
                                         </a>
                                     </button>
                                 </div>
                             </div>
+                            <ul className="flex flex-wrap gap-2 p-2">
+                                {pro.tools.map(item=> (
+                                    <li key={item} className="bg-[#dfd5d5] rounded-md p-1"
+                                    >{item}</li>
+                                ))}
+                            </ul>
                         </div>
                     ))
                 }

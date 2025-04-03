@@ -12,7 +12,21 @@ export default {
         "2xl": "6rem",
       },
     },
-    extend: {},
+    extend: {
+      keyframes:{
+        typing: {
+          "0%": { width: "0"},
+          "100%": { width: "235px"}
+        },
+        blink:{
+          "0%": { borderRightColor: "#fff"},
+          "100%": { borderRightColor: "transparent"}
+        }
+      },
+      animation:{
+        typing: "typing 3s steps(23) 2s both, blink 1s infinite"
+      }
+    },
   },
   plugins: [],
 };

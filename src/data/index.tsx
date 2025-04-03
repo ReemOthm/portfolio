@@ -24,6 +24,14 @@ export const projectsData: ProjectsData[] = [
         "tools": ["HTML","CSS","JavaScript"]
     },
     {
+        "projectName": "TODO Fetch Api",
+        "projectImage": "images/fetch-api.png",
+        "deployLink": "https://marvelous-beignet-da28e1.netlify.app/",
+        "githubRrpo": "https://github.com/ReemOthm/sda-fetch-api",
+        "description": "This project is a to do list application by applying HTML, CSS and Javascript. The application allows users to manage their tasks effectively.",
+        "tools": ["HTML","CSS","JavaScript"]
+    },
+    {
         "projectName": "React Budget App",
         "projectImage": "images/react-budget-app.png",
         "deployLink": "https://tranquil-paprenjak-6cd5ee.netlify.app/",
@@ -38,6 +46,14 @@ export const projectsData: ProjectsData[] = [
         "githubRrpo": "https://github.com/ReemOthm/home-decor-frontend",
         "description": "Home-Decor is an ecommerce website that provide a collection of home decoration and accessories products.",
         "tools": ["TypeScript", "React", "ASP.NET Core", "Material UI", "Redux"]
+    },
+    {
+        "projectName": "Travel Articles",
+        "projectImage": "images/travel-articles.png",
+        "deployLink": "https://travel-articles.netlify.app/",
+        "githubRrpo": "https://github.com/ReemOthm/travel-articles",
+        "description": "Travel Articles is a blog page to post articles.",
+        "tools": ["TypeScript", "Next.js", "TailwindCSS"]
     },
     // {
         //     "projectName": "Django Ecommerce",
